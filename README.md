@@ -1,4 +1,5 @@
 <ins> # Cron Job Bash Script <ins/>
+
 <ins> #Create a cron job shell script with bash commands with the following guidelines: <ins/>
 
 1. The script should run automatically every Friday at 11 pm.
