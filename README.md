@@ -22,4 +22,4 @@
 
 
 ###### <ins> Script Execution </ins>
-![run script](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/crontab_e%20run%20command.png)
+![run script](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/executed_script.png)https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/executed_script.png)
