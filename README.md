@@ -16,7 +16,7 @@ _________________________________________________
 
 1. <ins>sudo apt-get > /home/ubuntu/upgrad.pack.txt</ins>
 
-**sudo apt-get** downloads package data from all configured sources in the server & the **'>'** symbol into the **path** to the file I want the updated date to go into
+**sudo apt-get** downloads package data from all configured sources in the server & the **'>'** symbol puts the info into a newly created file with the absolute **path** to the file
 
 2. <ins> awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt > /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>
 
@@ -24,7 +24,7 @@ _________________________________________________
 
 3. <ins> echo 'the script is complete' && echo 'the system file has updated' && cd ~</ins>
 
-**echo 'the script is complete'** lets the user know the script has been completed & **echo 'the system file has updated'** lets the user know the system file has been updated & **cd ~** redirects the user in to the home directory in which the updated package file is located
+**echo 'the script is complete'** lets the user know the script has been completed  **echo 'the system file has updated'** lets the user know the system file has been updated & **cd ~** redirects the user in to the home directory in which the updated package file is located. The **'&&'** symbol just lets the script know that it needs to complete the first command on the left of the symbol before completing the second command on the right
 
 
 ![bashscript](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/bash_script.png)
@@ -45,7 +45,7 @@ ____________________________________________________
 ![crontabs](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/crontab_e%20run%20command.png)
 
 
-&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created: **<ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>** This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused and separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system without having to manually manipulated the source code.
+&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created: **<ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>** This can help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs at once. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused for separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system on an automatic schedule without having to manually manipulate the source code.
 _______________________________
 
 #### <ins> **Script Execution** </ins>
