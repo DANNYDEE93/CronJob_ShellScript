@@ -36,17 +36,16 @@ ____________________________________
 
 <ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh </ins> 
 
-&emsp;&emsp;&emsp;&emsp;  The purpose of the Cron Job allows my script to automate at a certain time. { 0 23 * * 5 } represents "minute", "hour", "day of the month", "month", "day of the week". This cron schedule notation creates the automatic execution of my **cron.job.sh** bash script every week on Friday at 11pm. I placed this notation in the crontab  directory that can be found in the path **/var/spool/cron/crontabs/** and then used **crontab-e** to open the crontab file text editor once there. In the crontab directory, the user can create and edit commands in specified user files without looking for a specific file under the user's file system. 
-
+&emsp;&emsp;&emsp;&emsp;  The purpose of the Cron Job allows my script to automate at a certain time. { 0 23 * * 5 } represents "minute", "hour", "day of the month", "month", "day of the week". This cron schedule notation creates the automatic execution of my **cron.job.sh** bash script every week on Friday at 11pm. I placed this notation in the crontab directory that can be found in the path **/var/spool/cron/crontabs/** and then used **crontab-e** to open the crontab file text editor once there. In the crontab directory, the user can create and edit commands withint the user's file system without looking for a specific file.
 
 __________________________________
-> &emsp;&emsp;&emsp;&emsp;  Placing the timestamp onto the file name within the script and not in the cron job as I described under **Bash Script** decreases reliance on the external factors of the cron job for script execution. The standalone script increases portability, reproductibility and distribution of it among additinal team members. Also, self- containing a script allows for simplicity within the script's deployment and increases security because the code is isolated and separate from the impact of external vulnerabilities. 
+> &emsp;&emsp;&emsp;&emsp;  Placing the timestamp onto the file name within the script as I described under **Bash Script** <ins>and not in the cron job, </ins> decreases reliance on the external factors of the cron job for script execution. The standalone script increases portability, reproductibility and distribution of it among additinal team members. Also, self- containing a script allows for simplicity within the script's deployment and increases security because the code is isolated and separate from the impact of external vulnerabilities. 
 ____________________________________________________
 
 
 <ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins> 
 
-&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created. This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. This also aids with version co
+&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created. This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused and separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system without having to manually manipulated the source code.
 
 
 ![crontabs](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/crontab_e%20run%20command.png)
