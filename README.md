@@ -9,7 +9,7 @@ ________________________________
 
 ____________________________
 
-#### <ins> One liner command:</ins>  sudo apt-get > /home/ubuntu/upgrad.pack.txt | awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt > /home/ubuntu.pack.txt.$(date +'%m%d%Y') && echo 'the script is complete' && echo 'the system file has updated' && cd ~ 
+#### <ins> One liner command:</ins> sudo apt-get > /home/ubuntu/upgrad.pack.txt | awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt > /home/ubuntu.pack.txt.$(date +'%m%d%Y') && echo 'the script is complete' && echo 'the system file has updated' && cd ~
 _________________________________________________
 
 #### <ins> **Bash Script** </ins> 
