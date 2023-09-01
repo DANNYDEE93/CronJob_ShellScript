@@ -12,7 +12,7 @@ ____________________________
 #### <ins> One liner command:</ins>  sudo apt-get > /home/ubuntu/upgrad.pack.txt | awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt > /home/ubuntu.pack.txt.$(date +'%m%d%Y') && echo 'the script is complete' && echo 'the system file has updated' && cd ~ 
 _________________________________________________
 
-##### <ins> **Bash Script** </ins> 
+#### <ins> **Bash Script** </ins> 
 
 1. <ins>sudo apt-get > /home/ubuntu/upgrad.pack.txt</ins>
 
@@ -32,7 +32,7 @@ _________________________________________________
 
 ____________________________________
 
-##### <ins> **Cron Job Notation** <ins/>
+#### <ins> **Cron Job Notation** <ins/>
 
 <ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh </ins> 
 
@@ -48,7 +48,7 @@ ____________________________________________________
 &emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created: **<ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>** This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused and separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system without having to manually manipulated the source code.
 _______________________________
 
-##### <ins> **Script Execution** </ins>
+#### <ins> **Script Execution** </ins>
 
 The script came back with no errors, let the user know the updates I commanded it to, and redirected the user to the home directory to shorten their path to the updated package file.
 
