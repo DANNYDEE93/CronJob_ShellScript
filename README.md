@@ -2,20 +2,19 @@
 ##### Danielle Davis
 ##### Date: 8.30.23
 ________________________________
+
 ##### <ins> Purpose: </ins>
 
-&emsp;&emsp;&emsp;&emsp;  To create a Bash script to automatically update the server, create a new file to input the outputted packages of data, number this data in a numerical list form, and to add the current date of each update to the end of the new file. Most importantly, these requeirements were to update the server every Friday at 11pm, which allows developers to automate their software to create, debug, and execute source code, in order to automatically update data to their databse.
-
+&emsp;&emsp;&emsp;&emsp;  To create a Bash script to automatically update the server, create a new file to input the outputted packages of data, list the new updated data numerically, and to add the current date of each update to the end of the new file. Most importantly, these requeirements were to update the server every Friday at 11pm, which allows developers to automate their software to create, debug, and execute source code, in order to automatically update data to their databse.
 ____________________________
 ###### <ins> One liner command:</ins>  sudo apt-get > /home/ubuntu/upgrad.pack.txt | awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') && echo 'the script is complete' && echo 'the system file has updated' && cd ~ 
 _________________________________________________
 
-</ins> #sudo apt-get > /home/ubuntu/upgrad.pack.txt</ins>
+#sudo apt-get > /home/ubuntu/upgrad.pack.txt
 
 **sudo apt-get** downloads package data from all configured sources in the server & the **'>'** symbol into the **path** to the file I want the updated date to go into
 
-<ins>#awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt >> /home/ubuntu.pack.txt.$(date +'%m%d%Y')
-</ins>
+#awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt >> /home/ubuntu.pack.txt.$(date +'%m%d%Y')
 
 **awk '{print FNR "."$0}'**  numbers the list of packages in the file i created that contains the updated packages **/home/ubuntu/upgrad.pack.txt**, then **>> /home/ubuntu.pack.txt.$(date +'%m%d%Y')** adds the date at which each update occurs from the updated package file onto the end of the name of the file whih allows the user know the server updated every Monday morning. 
 
