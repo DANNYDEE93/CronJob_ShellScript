@@ -42,15 +42,10 @@ __________________________________
 > &emsp;&emsp;&emsp;&emsp;  Placing the timestamp onto the file name within the script as I described under **Bash Script** <ins>and not in the cron job, </ins> decreases reliance on the external factors of the cron job for script execution. The standalone script increases portability, reproductibility and distribution of it among additinal team members. Also, self- containing a script allows for simplicity within the script's deployment and increases security because the code is isolated and separate from the impact of external vulnerabilities. 
 ____________________________________________________
 
-
-<ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins> 
-
-&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created. This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused and separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system without having to manually manipulated the source code.
-
-
 ![crontabs](https://github.com/DANNYDEE93/CronJob_ShellScript/blob/main/CronJobBashScript/crontab_e%20run%20command.png)
 
 
+&emsp;&emsp;&emsp;&emsp;  Alternatively, if the user wanted to include the timestamp in the the cron job instead of the script as depicted above, a new file for each update is still created: **<ins> { 0 23 * * 5 } /home/.ssh/cron.job.sh >> /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>** This can also help the user control the filename format externally so the script does not need to be modified and you can control multiple cron jobs. Utilizing cron jobs helps increase resource efficiency, community contributions, and allows users to break code into smaller, more manageable components to be reused and separate concerns of functionality. Using cron jobs can also increase upgradability so when external libraries and packages are updated, the lastest versions can be easily incorporated in the system without having to manually manipulated the source code.
 _______________________________
 
 ###### <ins> **Script Execution** </ins>
