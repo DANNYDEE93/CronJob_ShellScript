@@ -20,7 +20,7 @@ _________________________________________________
 
 2. <ins> awk '{print FNR "."$0}' /home/ubuntu/upgrad.pack.txt > /home/ubuntu.pack.txt.$(date +'%m%d%Y') </ins>
 
-**awk '{print FNR "."$0}'**  numbers the list of packages in the file i created that contains the updated packages **/home/ubuntu/upgrad.pack.txt**, then **'>' /home/ubuntu.pack.txt.$(date +'%m%d%Y')** adds the date to each file name that is created by the script for when the update that occurs allowing the user to know the server updated. <ins> (see **Cron Job Notation** for scheduling the script execution) </ins>
+**awk '{print FNR "."$0}'**  numbers the list of packages in the file i created that contains the updated packages **/home/ubuntu/upgrad.pack.txt**, then **'>' /home/ubuntu.pack.txt.$(date +'%m%d%Y')** adds the date to each file name that is created by the script for when the update that occurs allowing the user to know the server updated. *(see **Cron Job Notation** for scheduling the script execution)*
 
 3. <ins> echo 'the script is complete' && echo 'the system file has updated' && cd ~</ins>
 
